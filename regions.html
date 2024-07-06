@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регионы в игре Slime Rancher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Регионы в игре Slime Rancher</h1>
+    </header>
+    <div class="container" id="mossBlanket">
+        <img src="maxresdefault.png">
+        <h2>Мшистый покров</h2>
+        <p>Мшистый покров — это первый район, который игроки могут исследовать в игре Slime Rancher. Он известен своей обилием зелени, огромному разнообразию слизней и уникальным ареалом для разведения. Здесь вы можете встретить Пинк слизней, Рад слизней и много других.</p>
+        <p>Также, в этом районе можно найти различные растения, такие как ягоды, трава и цветы, которые используются для кормления слизней на вашей ферме.</p>
+    </div>
+
+    <div class="container" id="indigoQuarry">
+        <img src="maxresdefault2.png">
+        <h2>Индиго карьер</h2>
+        <p>Индиго карьер — это загадочное место с голубоватыми оттенками, известное своими уникальными геологическими образованиями и уединенным роскошным видом. Здесь обитают Рок слизни, Кристалл слизни и другие интересные виды.</p>
+        <p>В регионе Индиго карьер можно обнаружить различные минералы и кристаллы, а также редкие растения, которые могут пригодиться для создания новых способов кормления и ухода за слизнями.</p>
+    </div>
+    <div class="container" id="glassDesert">
+        <img src="maxresdefault3.png">
+        <h2>Стеклянная пустыня</h2>
+        <p>Стеклянная пустыня — это удивительный район, где встречаются сложные пазлы и скрытые загадки. Здесь обитают Табби слизни, Радиоактивные слизни и другие экзотические виды.</p>
+        <p>В этой пустыне можно обнаружить уникальные кристаллические формации и растения, которые используются для создания особых условий для жизни слизней с уникальными потребностями.</p>
+
+
+
+        <h3>Это всеголиш 3 регионов в Slime racnher. Всего 34 региона. 34 региона из обеих частей. </h3>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+    var header = document.querySelector('header');
+    var slimeImage = document.createElement('img');
+    slimeImage.src = 'slime3.jpg';
+    slimeImage.style.display = 'none';
+    slimeImage.style.position = 'absolute';
+    slimeImage.style.top = '50px';
+    slimeImage.style.left = '50%';
+    slimeImage.style.transform = 'translateX(-50%)';
+    
+    var caption = document.createElement('p');
+    caption.innerHTML = 'Поймал Кота :D';
+    caption.style.display = 'none';
+    caption.style.position = 'absolute';
+    caption.style.top = '180px';
+    caption.style.left = '50%';
+    caption.style.transform = 'translateX(-50%)';
+    caption.style.fontSize = '24px';
+
+    header.addEventListener('click', function() {
+        if (slimeImage.style.display === 'none') {
+            slimeImage.style.display = 'block';
+            caption.style.display = 'block';
+            header.appendChild(slimeImage);
+            header.appendChild(caption);
+        } else {
+            slimeImage.style.display = 'none';
+            caption.style.display = 'none';
+        }
+    });
+});
+    </script>
+</body>
+</html>

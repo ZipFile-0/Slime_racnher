@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о Slime Rancher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <title>
+        <nav>
+            <ul>
+                <li><a href="#home">1. Начало</a></li>
+                <li><a href="#main-info">2. Основная информация</a></li>
+            </ul>
+        </nav>
+    </title>
+    <header>
+        <h1>Добро пожаловать на страницу о Slime Rancher!</h1>
+    </header>
+    <div class="container" id="home">
+        <p>Slime Rancher - это очаровательная игра, в которой вы управляете фермерской станцией, разводите разноцветных слизней и исследуете удивительный фантастический мир.</p>
+        <p>Игра предлагает уникальный геймплей, захватывающие приключения и множество возможностей для развития и исследования.</p>
+        <p>Присоединитесь к персонажу по имени Биби Бии, чтобы познакомиться с удивительными слизнями, собрать редкие ресурсы, построить свою ферму и достичь успеха в этом увлекательном мире.</p>
+        <p> В Slime Racnher можно скачать с Steam,Официальном сайте игры.</p>
+        <h2><a href="slime.html">Слаймы</a></h2>
+        <p>В игре Slime Rancher существует множество видов слизней, каждый со своими уникальными свойствами и особенностями.</p>
+        <h2><a id="personsLink" href="persones.html"> Персонажи </a></h2>
+        <p>В игре вы встретите различных живописных персонажей, каждый с собственной историей и целями.</p>
+        <h2><a href="regions.html" >Регионы</a></h2>
+        <p>Исследуйте разнообразные регионы в мире Slime Rancher, каждый из которых пропитан уникальным характером и приключениями.</p>
+        <h2><a href="tutorial.html">Обучение</a></h2>
+        <p>Погрузитесь в увлекательное обучение и узнавайте все аспекты управления фермерской станцией и ухода за слизнями.</p>
+    </div>
+    <script>
+    window.addEventListener('load', function() {
+        var slimeLink = document.querySelector('a[href="slime.html"]');
+        
+        var slimeInfoContainer = document.createElement('div');
+        slimeInfoContainer.id = 'slimeInfoContainer';
+        slimeInfoContainer.style.display = 'none'; // Изначально скрываем контейнер
+        
+        var slimeInfo = document.createElement('div');
+        slimeInfo.id = 'slimeInfo';
+        
+        var description = document.createElement('p');
+        description.textContent = 'Slime Rancher предлагает разнообразных слизней с уникальными свойствами и способностями.';
+        slimeInfo.appendChild(description);
+        
+        var image = document.createElement('img');
+        image.src = 'Allslime.jpg'; // Замените "slime_image.jpg" на путь к вашей картинке
+        image.width = 200;
+        slimeInfo.appendChild(image);
+        
+        slimeInfoContainer.appendChild(slimeInfo);
+        document.body.appendChild(slimeInfoContainer);
+        
+        // Добавляем обработчики событий на наведение и покидание ссылки
+        slimeLink.addEventListener('mouseover', function() {
+    slimeInfoContainer.style.display = 'block';
+    slimeInfoContainer.style.position = 'absolute';
+    slimeInfoContainer.style.width = '200px'; // Задаем ширину квадрата
+    slimeInfoContainer.style.height = '200px'; // Задаем высоту квадрата
+    slimeInfoContainer.style.backgroundColor = 'lightgray'; // Цвет фона
+    slimeInfoContainer.style.border = '1px solid darkgray'; // Границы
+    slimeInfoContainer.style.padding = '10px'; // Внутренний отступ
+    slimeInfoContainer.style.left = (slimeLink.offsetLeft + 20) + 'px'; // Позиция
+    slimeInfoContainer.style.top = (slimeLink.offsetTop + 20) + 'px'; // Позиция
+});
+        
+        slimeLink.addEventListener('mouseout', function() {
+            slimeInfoContainer.style.display = 'none';
+        });
+    });
+    var personsLink = document.getElementById('personsLink');
+
+// Создать элемент для всплывающего поля
+var personsInfoContainer = document.createElement('div');
+personsInfoContainer.innerHTML = "Краткая информация о персонажах игры Slime Rancher";
+personsInfoContainer.style.position = 'absolute';
+personsInfoContainer.style.width = '200px'; // Задаем ширину прямоугольника
+personsInfoContainer.style.height = '100px'; // Задаем высоту прямоугольника
+personsInfoContainer.style.backgroundColor = 'lightgray'; // Цвет фона
+personsInfoContainer.style.border = '1px solid darkgray'; // Границы
+personsInfoContainer.style.padding = '10px'; // Внутренний отступ
+personsInfoContainer.style.display = 'none'; // Начально скрыто
+
+// Добавить всплывающее поле к телу документа
+document.body.appendChild(personsInfoContainer);
+
+// Добавить обработчик события для отображения всплывающего поля при наведении курсора
+personsLink.addEventListener('mouseover', function() {
+    personsInfoContainer.style.display = 'block';
+    personsInfoContainer.style.left = (personsLink.offsetLeft + 20) + 'px'; // Позиция
+    personsInfoContainer.style.top = (personsLink.offsetTop + 20) + 'px'; // Позиция
+});
+
+// Добавить обработчик события для скрытия всплывающего поля при уходе курсора
+personsLink.addEventListener('mouseout', function() {
+    personsInfoContainer.style.display = 'none';
+});
+window.addEventListener('load', function() {
+    var regionsLink = document.querySelector('a[href="regions.html"]');
+    
+    var regionsInfoContainer = document.createElement('div');
+    regionsInfoContainer.innerHTML = "Начальный регион для начала прохождения - Мшистый покров";
+    regionsInfoContainer.style.position = 'absolute';
+    regionsInfoContainer.style.width = '300px'; // задаем ширину окна
+    regionsInfoContainer.style.backgroundColor = 'lightgray'; // цвет фона
+    regionsInfoContainer.style.border = '1px solid darkgray'; // границы
+    regionsInfoContainer.style.padding = '10px'; // внутренний отступ
+    regionsInfoContainer.style.display = 'none'; // изначально скрыто
+
+    // добавляем всплывающее окно к телу документа
+    document.body.appendChild(regionsInfoContainer);
+
+    // добавляем обработчики событий для отображения всплывающего окна при наведении курсора
+    regionsLink.addEventListener('mouseover', function() {
+        regionsInfoContainer.style.display = 'block';
+        regionsInfoContainer.style.left = (regionsLink.offsetLeft + 20) + 'px'; // позиция
+        regionsInfoContainer.style.top = (regionsLink.offsetTop + 20) + 'px'; // позиция
+    });
+
+    // добавляем обработчики событий для скрытия всплывающего окна при уходе курсора
+    regionsLink.addEventListener('mouseout', function() {
+        regionsInfoContainer.style.display = 'none';
+    });
+});
+    </script>
+
+</html>
